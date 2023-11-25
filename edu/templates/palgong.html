@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<img src = "https://img2.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202111/29/sportskhan/20211129140517176ctzc.jpg"/>
+<br/>
+<form action = "/edu/milk" method = "POST">
+    {% csrf_token %}
+    <input type="text" name="tea"/>
+    <input type="submit" value="저장"/>
+</form>
+{% endblock  %}
