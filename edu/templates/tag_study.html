@@ -12,14 +12,24 @@
         </button>
     </p>
     <p>
-        <strong>이 코딩<br/></strong>
-        원장<br/>
+        <strong>장민재<br/></strong>
+        학생<br/>
     </p>
     <p>
         <a href = "https://www.ncdinos.com/">
         https://www.ncdinos.com/
         </a>
     <br/>
+    </p>
+    <p>
+        <ul>
+            {% for f in feed_list %}
+            <li>
+                <a href ="{% url 'edu:feed_detail' f.id %}">{{ f.content }}</a>
+                <img src="/media/{{ f.photo }}"/>
+            </li>
+            {% endfor %}
+        </ul>
     </p>
     <p>
         게시물<br/>
